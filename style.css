@@ -204,6 +204,54 @@ p {
     align-self: flex-start;
     margin-top: 16px;
 }
+/* ========== ABOUT SECTION ========== */
+.about {
+    margin-top: 60px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 260px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Optional: make it center nicely on small screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-bottom: 16px;
+    }
+}
+
 
 /* ========== CONTACT ========== */
 .contact {
