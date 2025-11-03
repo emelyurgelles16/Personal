@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Emely Urgelles — Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Emely <span>Urgelles</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="home" class="hero">
+            <div class="home card">
+                <h1>Welcome to My Personal Portfolio</h1>
+                <h2>Hi! I'm Emely Urgelles</h2>
+                <p class="lead">
+                    Explore my journey as a BSIT student passionate about building creative and functional websites.
+                    Here, you’ll find my best works and the skills I’ve developed throughout my studies.
+                </p>
+                <p style="margin-top:12px">
+                    <a class="btn" href="#about">Learn More About Me</a>
+                </p>
+            </div>
+
+            <aside class="card">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:emelyurgelles@example.com">emelyurgelles16@gmail.com</a></p>
+                <p>Contact: <a href="tel:09750884725">09750884725</a></p>
+                <p>Address: <span>Brgy. Sto. Tomas Calauan Laguna, Philippines</span></p>
+                <p>Facebook: <span>Emely Urgelles</span></p>
+                <ul style="list-style:none;padding-left:0">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="about" class="about card">
+            <h1>About Me</h1>
+            <p>
+                I'm a passionate <strong>BSIT student</strong> who loves turning creative ideas into
+                functional and visually appealing websites. I enjoy exploring both design and
+                development to create projects that are not only user-friendly but also meaningful.
+            </p>
+            <p>
+                My journey in Information Technology has taught me the value of <strong>problem-solving</strong>,
+                <strong>teamwork</strong>, and <strong>continuous learning</strong>. I am currently honing my skills in
+                <strong>web development, UI/UX design, and database management</strong> while working on
+                a variety of academic and personal projects.
+            </p>
+            <p>
+                Outside of coding, I enjoy learning new tools and exploring the latest tech trends
+                that can help improve how people interact with technology.
+            </p>
+
+            <h3>My Skills</h3>
+            <ul class="skills">
+                <li><strong>Front-End Development:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Back-End Development:</strong> ASP.NET Core, C#, PHP</li>
+                <li><strong>Database Management:</strong> MySQL, SQLite</li>
+                <li><strong>Design & UI/UX:</strong> Canva, Responsive Web Design</li>
+                <li><strong>Other Tools:</strong> Visual Studio, VS Code</li>
+                <li><strong>Soft Skills:</strong> Teamwork, Creativity, Problem-Solving, Time Management</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h1>My Projects</h1>
+            <div class="grid">
+                <article class="card">
+                    <div class="project-title">Pokédex API</div>
+                    <div class="project-desc">A CRUD-based ASP.NET Core Pokédex API using SQLite, seeded Pokémon types,
+                        Swagger integration, and optional JWT authentication for secure access.
+                        <br><br>
+                        <strong>Technologies:</strong> ASP.NET Core · C# · SQLite · Swagger
+                    </div>
+                    <p style="margin-top:12px"><a class="btn" href="#">Learn More</a></p>
+                </article>
+
+                <article class="card">
+                    <div class="project-title">Course Registration System</div>
+                    <div class="project-desc"> A dynamic system for managing student course enrollments with real-time
+                        validation,
+                        admin dashboards, and RESTful API endpoints.
+                        <br><br>
+                        <strong>Technologies:</strong> .NET Web API · Entity Framework Core · MySQL · HTML/CSS
+                    </div>
+                    <p style="margin-top:12px"><a class="btn" href="#">Learn More</a></p>
+                </article>
+
+                <article class="card">
+                    <div class="project-title">Inventory and Sales Management (Capstone projects)</div>
+                    <div class="project-desc"> A personal web portfolio showcasing projects, skills, and experiences
+                        with responsive design and smooth navigation.
+                        <br><br>
+                        <strong>Technologies:</strong> HTML · CSS · JavaScript
+                    </div>
+                    <p style="margin-top:12px"><a class="btn" href="#">Learn More</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact card">
+            <h1>Contact Me</h1>
+            <p style="color:var(--muted)">You can reach out to me through this form or directly via email at
+                <a href="mailto:emelyurgelles@example.com">emelyurgelles16@gmail.com</a>.
+            </p>
+
+            <form class="contact-form" onsubmit="sendMail(event)">
+                <label for="name">Your Name</label>
+                <input id="name" type="text" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input id="email" type="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <div style="margin-top:12px">
+                    <button class="btn" type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <p>© <span id="year"></span> Emely Urgelles. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function sendMail(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const subject = encodeURIComponent('Portfolio contact from ' + name);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+            window.location.href = `mailto:emelyurgelles16@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+
+</html>

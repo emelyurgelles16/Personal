@@ -1,0 +1,236 @@
+/* ========== GLOBAL STYLES ========== */
+:root {
+    --bg: #dbeafe;
+    /* Lighter blue background */
+    --card: #f1f5f9;
+    /* Light card background */
+    --muted: #475569;
+    /* Softer muted text */
+    --accent: #3b82f6;
+    /* Brighter blue accent */
+    --glass: rgba(255, 255, 255, 0.7);
+    --radius: 12px;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    color: #0f172a;
+    background: linear-gradient(180deg, #e0f2fe 0%, #c7d2fe 50%, #bfdbfe 100%);
+    background-attachment: fixed;
+}
+
+/* ========== HEADER ========== */
+header {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #0f172a;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ========== CONTENT ========== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+    padding: 25px 0;
+}
+
+/* Left card (Welcome) */
+.hero .card:first-child {
+    flex: 1;
+}
+
+.hero .card:last-child {
+    width: 360px;
+    flex-shrink: 0;
+}
+
+/* Card design */
+.hero .card {
+    background: #f9faff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* makes heights even */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive view for smaller screens */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero .card:last-child {
+        width: 100%;
+    }
+}
+
+/* Headings */
+.home h1,
+.about h1,
+.projects h1,
+.contact h1 {
+    color: var(--accent);
+}
+
+.home h2 {
+    color: #0f172a;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* ========== PROJECTS SECTION ========== */
+.projects {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Texts */
+.project-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.project-desc {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Buttons */
+.card .btn {
+    align-self: flex-start;
+    margin-top: 16px;
+}
+
+/* ========== CONTACT ========== */
+.contact {
+    margin-top: 40px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin: 10px 0 6px;
+    color: #1e293b;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    color: #0f172a;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    margin-top: 36px;
+    color: #475569;
+    font-size: 0.9rem;
+    text-align: center;
+}
